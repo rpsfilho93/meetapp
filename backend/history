@@ -1,0 +1,81 @@
+
+1- Criar diretório
+
+  $mkdir meetapp
+
+2- Entrar no diretório
+
+  $cd meetapp
+
+3- Iniciar Yarn
+
+  $yarn init -y
+
+4- Adicionar Express
+
+  $yarn add express
+
+5- Adicionar Nodemon e Sucrase
+
+  $yarn add nodemon sucrase -D
+
+  -Criar arquivo de configuração do Nodemon (Sucrase, execMap)
+  -Adicionar script de inicialização no package.json
+
+6- Iniciar container Docker
+
+  $docker run --name database2 -e POSTGRES_PASSWORD=docker -p 5433:5432 -d postgres
+
+7- Adicionar ESlint
+
+  $yarn add eslint -D
+
+8- Iniciar ESlint
+
+  $yarn eslint --init
+
+9- Atualizar dependências
+
+  $yarn
+
+  -Adicionar rules ao .eslintrc.js
+
+10- Adicionar Prettier
+
+  $yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
+  -Criar arquivo .prettierrc (singleQuote, trailingComma)
+
+11- Adicionar Sequelize
+
+  $yarn add sequelize
+  $yarn add sequelize-cli -D
+
+  -Criar .sequelizerc com paths para: database.js, models, migrations e seeders
+
+12 Adicionar extensões postgres
+
+$yarn add pg pg-hstore
+
+13 Criar migration de usuário
+
+$yarn sequelize migration:create --name=create_users
+
+14 Criar pastas e arquivos
+src
+  app
+    controllers
+    middlewares
+    models
+  config
+    database.js
+  database
+    migrations
+app.js
+routes.js
+server.js
+
+15 database.js é um arquivo com as configurações para o container postgres.
+
+16 Realizar migration para database
+
+yarn sequelize db:migrate
