@@ -5,6 +5,7 @@ Desafio consisti em desenvolver uma aplicação (web e mobile) em que os usuári
 
 O app mobile foi desenvolvido para a plataforma ANDROID. 
 
+Instruções:
 
 1.Iniciar o backend da aplicação (diretório backend):
 
@@ -25,3 +26,11 @@ O app mobile foi desenvolvido para a plataforma ANDROID.
 5.Iniciar development server:
 
 #react-native start --reset-cache
+
+6.Conectar aplicação mobile às portas de debug e servers.
+
+#adb reverse tcp:3333 tcp:3333
+
+#adb reverse tcp:9090 tcp:9090
+
+#adb reverse tcp:8081 tcp:8081
