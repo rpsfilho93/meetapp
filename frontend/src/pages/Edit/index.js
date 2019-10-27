@@ -4,6 +4,7 @@ import * as Yup from 'yup';
 import { Form, Input } from '@rocketseat/unform';
 import { MdAddCircleOutline } from 'react-icons/md';
 import BannerInput from './BannerInput';
+import DateInput from './DateInput';
 
 import {
   addMeetupRequest,
@@ -38,7 +39,7 @@ export default function Edit() {
         <BannerInput name="image_id" />
         <Input name="title" placeholder="Título do Meetup" />
         <Input multiline name="description" placeholder="Descrição completa" />
-        <Input name="date" placeholder="Data do meetup" />
+        <DateInput name="date" />
         <Input name="location" placeholder="Localização" />
         <button type="submit">
           <div>

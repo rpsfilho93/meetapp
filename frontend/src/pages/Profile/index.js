@@ -4,7 +4,6 @@ import * as Yup from 'yup';
 import { Form, Input } from '@rocketseat/unform';
 import { MdAddCircleOutline } from 'react-icons/md';
 
-import AvatarInput from './AvatarInput';
 import { updateProfileRequest } from '~/store/modules/user/actions';
 
 import { Container } from './styles';
@@ -40,7 +39,6 @@ export default function Profile() {
   return (
     <Container>
       <Form schema={schema} initialData={profile} onSubmit={handleSubmit}>
-        <AvatarInput name="avatar_id" />
         <Input name="name" placeholder="Nome completo" />
         <Input name="email" type="email" placeholder="Endereço de e-mail" />
 

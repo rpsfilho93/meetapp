@@ -8,6 +8,37 @@ export const Container = styled.div`
   form {
     display: flex;
     flex-direction: column;
+
+    > button {
+      display: flex;
+      align-items: center;
+      align-self: flex-end;
+      height: 38px;
+      width: 172px;
+      padding: 0 20px;
+      background: #f94d6a;
+      font-weight: bold;
+      color: #fff;
+      border: 0;
+      border-radius: 4px;
+      font-size: 16px;
+      transition: background 0.2s;
+
+      &:hover {
+        background: ${darken(0.07, '#F94D6A')};
+      }
+
+      div {
+        display: flex;
+        align-items: center;
+      }
+
+      span {
+        flex: 1;
+        text-align: center;
+        font-weight: bold;
+      }
+    }
   }
 
   input {
@@ -35,37 +66,6 @@ export const Container = styled.div`
     overflow: hidden;
     &::placeholder {
       color: rgba(255, 255, 255, 0.3);
-    }
-  }
-
-  button {
-    display: flex;
-    align-items: center;
-    align-self: flex-end;
-    height: 38px;
-    width: 172px;
-    padding: 0 20px;
-    background: #f94d6a;
-    font-weight: bold;
-    color: #fff;
-    border: 0;
-    border-radius: 4px;
-    font-size: 16px;
-    transition: background 0.2s;
-
-    &:hover {
-      background: ${darken(0.07, '#F94D6A')};
-    }
-
-    div {
-      display: flex;
-      align-items: center;
-    }
-
-    span {
-      flex: 1;
-      text-align: center;
-      font-weight: bold;
     }
   }
 `;
